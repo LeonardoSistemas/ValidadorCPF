@@ -21,6 +21,15 @@ function multiplicarvaloresdoarray(){
     let valorresultadocalculo = 0
 
     for(let indexarraydigitado = 0; indexarraydigitado < arraycpfdigitado.length; indexarraydigitado ++){
-        valorresultadocalculo = arraycpfdigitado[indexarraydigitado] * valorcalculo        
+        valorresultadocalculo = arraycpfdigitado[indexarraydigitado] * valorcalculo
+        
+        armazenarvalorescalculoarraynovo(valorresultadocalculo)
+        valorcalculo --
     }
+}
+
+function armazenarvalorescalculoarraynovo(valorresultadocalculo){
+
+    arraycomcalculoprimeirodigito.push(valorresultadocalculo)
+    
 }
