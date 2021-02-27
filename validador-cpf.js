@@ -1,5 +1,6 @@
 let arraycpfdigitado = []
 let arraycomcalculoprimeirodigito = []
+let arraycomcalculosegundodigito = []
 
 function capturarcpfdigitado(){
     let cpfdigitado = document.getElementById('txtNumero').value
@@ -69,8 +70,34 @@ function validarprimeirodigito(validarprimeirodigito){
 
 function adicionarvalornoarraycpf(validarprimeirodigito){
     arraycpfdigitado.push(validarprimeirodigito);
+    multiplicarvaloresdoarraySegundoDigito()
 }
 
 function mostrarmensagemcpfinvalido(){
     alert('CPF digito é inválido!!')
+}
+
+function multiplicarvaloresdoarraySegundoDigito(){
+    let valorcalculo = 11
+    let valorresultadocalculo = 0
+
+    for(let indexarraydigitado = 0; indexarraydigitado < arraycpfdigitado.length; indexarraydigitado ++){
+        valorresultadocalculo = arraycpfdigitado[indexarraydigitado] * valorcalculo
+        
+        armazenarvalorescalculoarraysegundodigito(valorresultadocalculo)
+        valorcalculo --
+    }
+
+    somarvalorescomcalculodosegundodigito()
+}
+
+function armazenarvalorescalculoarraysegundodigito(valorresultadocalculo){
+
+    arraycomcalculosegundodigito.push(valorresultadocalculo)
+    
+}
+
+function somarvalorescomcalculodosegundodigito(){
+    const resultadosomaarray = arraycomcalculosegundodigito.reduce((valortotal, valorcorrente) => valortotal + valorcorrente)
+    dividirpor11(resultadosomaarray)
 }
