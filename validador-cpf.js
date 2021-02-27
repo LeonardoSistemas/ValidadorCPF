@@ -66,3 +66,11 @@ function validarprimeirodigito(validarprimeirodigito){
     else   
         mostrarmensagemcpfinvalido()
 }
+
+function adicionarvalornoarraycpf(validarprimeirodigito){
+    arraycpfdigitado.push(validarprimeirodigito);
+}
+
+function mostrarmensagemcpfinvalido(){
+    alert('CPF digito é inválido!!')
+}
