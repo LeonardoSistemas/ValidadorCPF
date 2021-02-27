@@ -54,4 +54,15 @@ function calcularprimeirodigito(restodivisao){
 
     if(restodivisao < 10)
         valorprimeirodigito = 11 - restodivisao
+    
+    validarprimeirodigito(valorprimeirodigito)
+}
+
+function validarprimeirodigito(validarprimeirodigito){
+    let primeirodigitodigitado = document.getElementById('txtNumero').value.substring(9,10)
+
+    if(primeirodigitodigitado == validarprimeirodigito)
+        adicionarvalornoarraycpf(validarprimeirodigito)
+    else   
+        mostrarmensagemcpfinvalido()
 }
