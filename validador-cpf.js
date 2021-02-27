@@ -45,5 +45,13 @@ function dividirpor11(resultadosomaarray){
     let restodivisao = 0
     restodivisao = resultadosomaarray % 11
 
-    calcularprimeirodigito()
+    calcularprimeirodigito(restodivisao)
+}
+
+function calcularprimeirodigito(restodivisao){
+
+    let valorprimeirodigito = 0
+
+    if(restodivisao < 10)
+        valorprimeirodigito = 11 - restodivisao
 }
