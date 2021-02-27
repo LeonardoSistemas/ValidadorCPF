@@ -110,3 +110,16 @@ function dividirpor11segundodigito(resultadosomaarray){
 
     validarsegundodigito(resultadosegundodigito)
 }
+
+function validarsegundodigito(resultadosegundodigito){
+    let segundodigitodigitado = document.getElementById('txtNumero').value.substring(10,11)
+
+    if(segundodigitodigitado == resultadosegundodigito)
+        mostrarmensagemcpfvalido()
+    else
+        mostrarmensagemcpfinvalido()
+}
+
+function mostrarmensagemcpfvalido(){
+    alert('CPF digitado é válido!!')
+}
