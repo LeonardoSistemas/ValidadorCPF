@@ -41,3 +41,9 @@ function somarvalorescomcalculodosdigitos(){
     dividirpor11(resultadosomaarray)
 }
 
+function dividirpor11(resultadosomaarray){
+    let restodivisao = 0
+    restodivisao = resultadosomaarray % 11
+
+    calcularprimeirodigito()
+}
