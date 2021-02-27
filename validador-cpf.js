@@ -26,6 +26,8 @@ function multiplicarvaloresdoarray(){
         armazenarvalorescalculoarraynovo(valorresultadocalculo)
         valorcalculo --
     }
+
+    somarvalorescomcalculodosdigitos()
 }
 
 function armazenarvalorescalculoarraynovo(valorresultadocalculo){
@@ -33,3 +35,9 @@ function armazenarvalorescalculoarraynovo(valorresultadocalculo){
     arraycomcalculoprimeirodigito.push(valorresultadocalculo)
     
 }
+
+function somarvalorescomcalculodosdigitos(){
+    const resultadosomaarray = arraycomcalculoprimeirodigito.reduce((valortotal, valorcorrente) => valortotal + valorcorrente)
+    dividirpor11(resultadosomaarray)
+}
+
