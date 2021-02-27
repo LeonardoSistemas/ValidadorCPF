@@ -99,5 +99,14 @@ function armazenarvalorescalculoarraysegundodigito(valorresultadocalculo){
 
 function somarvalorescomcalculodosegundodigito(){
     const resultadosomaarray = arraycomcalculosegundodigito.reduce((valortotal, valorcorrente) => valortotal + valorcorrente)
-    dividirpor11(resultadosomaarray)
+    dividirpor11segundodigito(resultadosomaarray)
+}
+
+function dividirpor11segundodigito(resultadosomaarray){
+
+    let resultadosegundodigito = 0
+
+    resultadosegundodigito = resultadosomaarray * 10 % 11
+
+    validarsegundodigito(resultadosegundodigito)
 }
